@@ -5,6 +5,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import styled from '@emotion/styled';
 import { theme } from '../theme';
+import NavBarSub from './NavBarSub';
 
 const StyledToolbar = styled(Toolbar)({
   justifyContent: "space-between"
@@ -74,6 +75,8 @@ function NavBar() {
           </div>
         </StyledToolbar>
       </AppBar>
+      
+      <NavBarSub />
     </div>
   )
 }
