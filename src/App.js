@@ -6,19 +6,23 @@ import Catalogue from './pages/Catalogue';
 import Product from './pages/Product';
 import NavBarSub from './components/NavBarSub';
 import BottomBar from './components/BottomBar';
+import { Box } from '@mui/system';
 
 function App() {
   return (
     <Router>
+      <Box minHeight={"1080px"}>
         <NavBar />
         <NavBarSub />
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/shoppingcart" element={<Cart/>} />
-          <Route path="/catalogue" element={<Catalogue/>} />
-          <Route path="/product" element={<Product/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/shoppingcart" element={<Cart />} />
+          <Route path="/catalogue" element={<Catalogue />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
-        <BottomBar/>
+      </Box>
+
+      <BottomBar />
     </Router>
   );
 }
