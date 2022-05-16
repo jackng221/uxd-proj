@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { AppBar, Toolbar, Button, IconButton, InputBase } from '@mui/material';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { AppBar, Toolbar, Button, IconButton, InputBase, Popper, List, ListItemButton } from '@mui/material';
+import { Link } from 'react-router-dom';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import styled from '@emotion/styled';
 import { theme } from '../theme';
-import NavBarSub from './NavBarSub';
 
 const StyledToolbar = styled(Toolbar)({
   justifyContent: "space-between"
@@ -38,10 +37,26 @@ const StyledHomeButton = styled(Button)({
   color: "black",
   fontSize: 30,
 })
+const StyledListButton = styled(ListItemButton)({
+  backgroundColor: "white",
+  borderRadius: 12,
+  margin: 8,
+  justifyContent: "center",
+  fontSize: 20,
+})
 
 function NavBar() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const HandleClick = (event) => {
+    setAnchorEl(anchorEl ? null : event.currentTarget);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'simple-popper' : undefined;
+
   return (
-    <Router><div className="navBar">
+    <div className="navBar">
       <AppBar position="static">
         <StyledToolbar>
 
@@ -61,16 +76,29 @@ function NavBar() {
                 margin: 1
               }} />
             </div>
-            <StyledSearchButton variant="contained">
-              <SearchOutlinedIcon fontSize="large" />
-            </StyledSearchButton>
+            <Link to="/catalogue">
+              <StyledSearchButton variant="contained">
+                <SearchOutlinedIcon fontSize="large" />
+              </StyledSearchButton>
+            </Link>
           </Search>
 
           <div>
-            <StyledButton variant="contained">
+            <StyledButton variant="contained" onClick={HandleClick}>
               <PersonOutlineOutlinedIcon fontSize="large" />
             </StyledButton>
-            <Link to="/cart" style={{ textDecoration: "none" }}>
+            <Popper open={open} anchorEl={anchorEl}>
+              <List sx={{borderRadius: 4, backgroundColor: theme.palette.primary.main}}>
+                <StyledListButton>Login/Register</StyledListButton>
+                <StyledListButton>Favourites</StyledListButton>
+                <StyledListButton>Forum</StyledListButton>
+                <StyledListButton>Language</StyledListButton>
+                <StyledListButton>Log out</StyledListButton>
+
+              </List>
+            </Popper>
+
+            <Link to="/shoppingcart" style={{ textDecoration: "none" }}>
               <StyledButton variant="contained">
                 <ShoppingCartOutlinedIcon fontSize="large" />
               </StyledButton>
@@ -78,10 +106,7 @@ function NavBar() {
           </div>
         </StyledToolbar>
       </AppBar>
-
-      <NavBarSub />
     </div>
-    </Router>
   )
 }
 

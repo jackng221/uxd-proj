@@ -1,5 +1,6 @@
-import { AppBar, IconButton, Collapse, Divider, Grid, List, ListItemButton, Toolbar } from '@mui/material'
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom';
+import { AppBar, IconButton, Collapse, Divider, Grid, List, ListItemButton, Toolbar } from '@mui/material'
 import styled from '@emotion/styled';
 import { theme } from '../theme';
 import { Box } from '@mui/system';
@@ -60,18 +61,26 @@ const StyledCurrentPos = styled("div")({
     padding: 8,
     fontSize: 20,
 })
-
 function NavBarSub() {
+    const PAGE_TEXTS = [
+        {page:"/", text: "Main Page"},
+        {page:"/shoppingcart", text: "Shopping Cart"},
+        {page:"/catalogue", text: "Catalogue"},
+        {page:"/product", text: "Product Details"}
+    ]
+    const location = useLocation();
+    const currentPage = PAGE_TEXTS.find(el => el.page === location.pathname)?.text;
+
     const [openCat, setOpenCat] = React.useState(false);
     const [openFAQ, setOpenFAQ] = React.useState(false);
     const [stateCat, setStateCat] = React.useState("");
 
-    const handleClick = (x) => {
-        switch(x){
+    const HandleClick = (x) => {
+        switch (x) {
             case "cat":
                 setOpenCat(!openCat);
                 setOpenFAQ(false);
-                if (!openCat){
+                if (!openCat) {
                     setStateCat("");
                 }
                 break;
@@ -88,7 +97,6 @@ function NavBarSub() {
             default: break;
         }
     };
-
     return (
         <React.Fragment>
             <AppBar position="static" sx={{
@@ -100,17 +108,17 @@ function NavBarSub() {
                         flexDirection: "row",
                     }}>
                         <List sx={{
-                            padding:0
+                            padding: 0
                         }}>
-                            <StyledListButton onClick={()=> handleClick("cat")}>Item Categories</StyledListButton>
+                            <StyledListButton onClick={() => HandleClick("cat")}>Item Categories</StyledListButton>
                             <Collapse in={openCat} timeout="auto" unmountOnExit>
                                 <Box sx={{
                                     display: "flex",
                                     flexDirection: "row",
                                 }}>
                                     <List>
-                                        <StyledListButton onClick={()=> handleClick("cat_type")}>Type</StyledListButton><Divider />
-                                        <StyledListButton onClick={()=> handleClick("cat_brand")}>Brand</StyledListButton><Divider />
+                                        <StyledListButton onClick={() => HandleClick("cat_type")}>Type</StyledListButton><Divider />
+                                        <StyledListButton onClick={() => HandleClick("cat_brand")}>Brand</StyledListButton><Divider />
                                         <StyledListButton>Region</StyledListButton><Divider />
                                         <StyledListButton>Free shipping</StyledListButton><Divider />
                                         <StyledListButton>Samples</StyledListButton><Divider />
@@ -128,46 +136,45 @@ function NavBarSub() {
                                     </Collapse>
                                     <Collapse in={stateCat === "cat_brand"} timeout="auto" unmountOnExit>
                                         <Grid container width={"500px"} columns={4} spacing={0}>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Albion} alt="Albion"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={AugustinusBader} alt="AugustinusBader"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Covermark} alt="Covermark"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Curel} alt="Curel"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={DrWu} alt="DrWu"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={FaceQ} alt="FaceQ"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={HACCI} alt="HACCI"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={HadaLabo} alt="HadaLabo"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={JuJuAquamoist} alt="JuJuAquamoist"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={KaoBiore} alt="KaoBiore"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Kose} alt="Kose"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Laneige} alt="Laneige"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Minon} alt="Minon"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Mioggi} alt="Mioggi"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Nivea} alt="Nivea"/></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Orbis} alt="Orbis"/></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Albion} alt="Albion" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={AugustinusBader} alt="AugustinusBader" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Covermark} alt="Covermark" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Curel} alt="Curel" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={DrWu} alt="DrWu" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={FaceQ} alt="FaceQ" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={HACCI} alt="HACCI" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={HadaLabo} alt="HadaLabo" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={JuJuAquamoist} alt="JuJuAquamoist" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={KaoBiore} alt="KaoBiore" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Kose} alt="Kose" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Laneige} alt="Laneige" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Minon} alt="Minon" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Mioggi} alt="Mioggi" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Nivea} alt="Nivea" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Orbis} alt="Orbis" /></StyledGridButton></StyledGridBox></Grid>
                                         </Grid>
                                     </Collapse>
                                 </Box>
-
                             </Collapse>
                         </List>
                         <List sx={{
-                            padding:0
+                            padding: 0
                         }}>
-                            <StyledListButton onClick={()=> handleClick("faq")}>FAQ</StyledListButton>
+                            <StyledListButton onClick={() => HandleClick("faq")}>FAQ</StyledListButton>
                             <Collapse in={openFAQ} timeout="auto" unmountOnExit>
                                 <List>
-                                    <StyledListButton>Shipping</StyledListButton><Divider/>
-                                    <StyledListButton>Payment</StyledListButton><Divider/>
-                                    <StyledListButton>Privacy notice</StyledListButton><Divider/>
-                                    <StyledListButton>Gift certificate</StyledListButton><Divider/>
-                                    <StyledListButton>Site map</StyledListButton><Divider/>
+                                    <StyledListButton>Shipping</StyledListButton><Divider />
+                                    <StyledListButton>Payment</StyledListButton><Divider />
+                                    <StyledListButton>Privacy notice</StyledListButton><Divider />
+                                    <StyledListButton>Gift certificate</StyledListButton><Divider />
+                                    <StyledListButton>Site map</StyledListButton><Divider />
                                     <StyledListButton>Contact us</StyledListButton>
                                 </List>
                             </Collapse>
                         </List>
                     </Box>
                     <StyledCurrentPos>
-                        You are at:
+                        You are at: {currentPage}
                     </StyledCurrentPos>
                 </StyledToolbar>
             </AppBar>
