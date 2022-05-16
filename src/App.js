@@ -5,6 +5,7 @@ import Cart from './pages/Cart';
 import Catalogue from './pages/Catalogue';
 import Product from './pages/Product';
 import NavBarSub from './components/NavBarSub';
+import BottomBar from './components/BottomBar';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/catalogue" element={<Catalogue/>} />
           <Route path="/product" element={<Product/>} />
         </Routes>
+        <BottomBar/>
     </Router>
   );
 }
