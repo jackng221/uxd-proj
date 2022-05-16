@@ -47,11 +47,19 @@ const StyledListButton = styled(ListItemButton)({
 
 function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [inputText, setInputText] = React.useState("");
 
   const HandleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
   };
   const open = Boolean(anchorEl);
+
+  const HandleInput = (event) =>{
+    setInputText(event.target.value);
+  }
+  const HandleSearch = () =>{
+    setInputText("");
+  }
 
   return (
     <div className="navBar">
@@ -70,12 +78,12 @@ function NavBar() {
               borderRadius: "10px",
               width: "100%"
             }} >
-              <InputBase fullWidth sx={{
+              <InputBase fullWidth value={inputText} onChange={HandleInput} sx={{
                 margin: 1
               }} />
             </div>
             <Link to="/catalogue">
-              <StyledSearchButton variant="contained">
+              <StyledSearchButton variant="contained" onClick={HandleSearch}>
                 <SearchOutlinedIcon fontSize="large" />
               </StyledSearchButton>
             </Link>

@@ -102,7 +102,7 @@ function Home() {
                     </Modal>
                 </List>
             </Stack>
-            <Box sx={{ display: "flex", justifyContent: "space-between", paddingX: 4, paddingY: 2, height: "550px" }}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", paddingRight: "25%", paddingY: 2, height: "550px" }}>
                 <img src={bannerState} alt="" />
                 <Box sx={{ display: "flex", flexDirection: "column-reverse", padding: 1 }}>
                     <StyledBannerButton onClick={() => HandleClick("banner1")}>1</StyledBannerButton>
