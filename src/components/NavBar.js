@@ -1,5 +1,6 @@
-import { AppBar, Toolbar, Button, IconButton, InputBase } from '@mui/material';
 import * as React from 'react';
+import { AppBar, Toolbar, Button, IconButton, InputBase } from '@mui/material';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -29,7 +30,7 @@ const StyledButton = styled(IconButton)({
   alignItems: "center",
 });
 const StyledSearchButton = styled(StyledButton)({
-    backgroundColor: theme.palette.search.main,
+  backgroundColor: theme.palette.search.main,
 });
 const StyledHomeButton = styled(Button)({
   margin: 5,
@@ -40,14 +41,15 @@ const StyledHomeButton = styled(Button)({
 
 function NavBar() {
   return (
-    <div className="navBar">
+    <Router><div className="navBar">
       <AppBar position="static">
         <StyledToolbar>
-          <StyledHomeButton onClick={() => {
 
-          }}>
-            BOBODAVE
-          </StyledHomeButton>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <StyledHomeButton>
+              BOBODAVE
+            </StyledHomeButton>
+          </Link>
 
           <Search>
             <div style={{
@@ -68,16 +70,18 @@ function NavBar() {
             <StyledButton variant="contained">
               <PersonOutlineOutlinedIcon fontSize="large" />
             </StyledButton>
-
-            <StyledButton variant="contained">
-              <ShoppingCartOutlinedIcon fontSize="large" />
-            </StyledButton>
+            <Link to="/cart" style={{ textDecoration: "none" }}>
+              <StyledButton variant="contained">
+                <ShoppingCartOutlinedIcon fontSize="large" />
+              </StyledButton>
+            </Link>
           </div>
         </StyledToolbar>
       </AppBar>
-      
+
       <NavBarSub />
     </div>
+    </Router>
   )
 }
 
