@@ -51,9 +51,7 @@ function NavBar() {
   const HandleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
   };
-
   const open = Boolean(anchorEl);
-  const id = open ? 'simple-popper' : undefined;
 
   return (
     <div className="navBar">

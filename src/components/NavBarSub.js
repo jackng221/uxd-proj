@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { AppBar, IconButton, Collapse, Divider, Grid, List, ListItemButton, Toolbar } from '@mui/material'
 import styled from '@emotion/styled';
 import { theme } from '../theme';
@@ -98,7 +98,7 @@ function NavBarSub() {
         }
     };
     return (
-        <React.Fragment>
+        <div className="NavBarSub">
             <AppBar position="static" sx={{
                 backgroundColor: theme.palette.secondary.main,
             }}>
@@ -178,7 +178,7 @@ function NavBarSub() {
                     </StyledCurrentPos>
                 </StyledToolbar>
             </AppBar>
-        </React.Fragment>
+        </div>
     )
 }
 
