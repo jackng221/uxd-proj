@@ -7,6 +7,7 @@ import Product from './pages/Product';
 import NavBarSub from './components/NavBarSub';
 import BottomBar from './components/BottomBar';
 import { Box } from '@mui/system';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Box minHeight={"1080px"}>
         <NavBar />
         <NavBarSub />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shoppingcart" element={<Cart />} />
