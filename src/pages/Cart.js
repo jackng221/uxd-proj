@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Box, Button, Checkbox, Grid, IconButton, MenuItem, Modal, Select, Typography } from '@mui/material'
+import { Box, Button, Checkbox, Divider, Grid, IconButton, MenuItem, Modal, Select, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { theme } from '../theme'
@@ -112,7 +112,7 @@ function Cart() {
                 </TableEntry>
                 <TableEntry item xs={1}><StyledCheckbox defaultChecked={true}/></TableEntry>
                 <TableEntry item xs={1}><IconButton onClick={() => HandleClick("delete")}><ClearIcon fontSize="large" /></IconButton></TableEntry>
-
+                <Divider style={{width:'100%'}}/>
                 {/* #2 */}
                 <TableEntry item xs={4}><Link to="/Product">Fancl HTC Collagen DX</Link></TableEntry>
                 <TableEntry item xs={2}>USD $160</TableEntry>
@@ -134,7 +134,7 @@ function Cart() {
                 </TableEntry>
                 <TableEntry item xs={1}><StyledCheckbox defaultChecked={true}/></TableEntry>
                 <TableEntry item xs={1}><IconButton onClick={() => HandleClick("delete")}><ClearIcon fontSize="large" /></IconButton></TableEntry>
-
+                <Divider style={{width:'100%'}}/>
                 {/* #3 */}
                 <TableEntry item xs={4}><Link to="/Product">St Clare Sebum Treatment Set</Link></TableEntry>
                 <TableEntry item xs={2}>USD $150</TableEntry>
@@ -156,7 +156,7 @@ function Cart() {
                 </TableEntry>
                 <TableEntry item xs={1}><StyledCheckbox defaultChecked={true}/></TableEntry>
                 <TableEntry item xs={1}><IconButton onClick={() => HandleClick("delete")}><ClearIcon fontSize="large" /></IconButton></TableEntry>
-
+                <Divider style={{width:'100%'}}/>
             </Grid>
             <Modal
                 open={openDelete}
@@ -174,18 +174,20 @@ function Cart() {
                     </Box>
                 </Box>
             </Modal>
-            <Box display={"flex"} flexDirection={"column"} alignItems={"flex-end"} padding={"10px"}>
-                <Typography align='right' fontSize={"24px"}>Item count: 3 <br/> Total weight: 45g <br/> Total price: USD $1010</Typography>
-                <Button sx={{
-                    width: "12%",
-                    height: "50px",
-                    fontSize: "20px",
-                    color: theme.palette.text.main,
-                    backgroundColor: theme.palette.secondary.main,
-                    "&:hover":{
-                        backgroundColor: theme.palette.secondary.dark,
-                    }
-                }}><ShoppingCartCheckoutIcon fontSize='large'/>Checkout</Button>
+            <Box display={"flex"} justifyContent="flex-end" padding={"10px"}>
+                <Box display="inline-flex" flexDirection={"column"} padding={"15px"} border={1}>
+                    <Typography align='left' fontSize={"24px"} style={{ lineHeight: "40px" }}>Item count: 3 <br /> Weight: 45g <br /> Price: USD $1010</Typography>
+                    <Button sx={{
+                        width: "100%",
+                        height: "50px",
+                        fontSize: "20px",
+                        color: theme.palette.text.main,
+                        backgroundColor: theme.palette.secondary.main,
+                        "&:hover": {
+                            backgroundColor: theme.palette.secondary.dark,
+                        }
+                    }}><ShoppingCartCheckoutIcon fontSize='large' />Checkout</Button>
+                </Box>
             </Box>
         </Box>
     )
