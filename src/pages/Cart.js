@@ -8,6 +8,7 @@ import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import DoneIcon from '@mui/icons-material/Done';
 import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ArrowDownwardOutlinedIcon from '@mui/icons-material/ArrowDownwardOutlined';
 
 const TableColumn = styled(Grid)({
     display: "flex",
@@ -81,7 +82,7 @@ function Cart() {
     return (
         <Box>
             <Box display="flex" flexDirection="row" alignItems="center" padding="20px">
-                <ShoppingCartOutlinedIcon fontSize="large" sx={{paddingRight:"20px"}}/><Typography variant="h4">Your shopping cart contains</Typography>
+                <ShoppingCartOutlinedIcon fontSize="large"/><Typography variant="h4" sx={{paddingX:"20px"}}>Your shopping cart contains</Typography><ArrowDownwardOutlinedIcon fontSize="large"/>
             </Box>
             <Grid container columns={12}>
                 <TableColumn item xs={4}>Item name</TableColumn>
@@ -92,9 +93,9 @@ function Cart() {
                 <TableColumn item xs={1}>Remove</TableColumn>
 
                 {/* #1 */}
-                <TableEntry item xs={4}><Link to="/Product">Sk II Facial Treatment Essence 160ml</Link></TableEntry>
-                <TableEntry item xs={2}>USD $700</TableEntry>
-                <TableEntry item xs={2}>USD $700</TableEntry>
+                <TableEntry item xs={4} component={Link} to="/product">Sk II Facial Treatment Essence 160ml</TableEntry>
+                <TableEntry item xs={2}>HKD $700</TableEntry>
+                <TableEntry item xs={2}>HKD $700</TableEntry>
                 <TableEntry item xs={2}>
                     <Select value={count1} onChange={(e) => HandleChange(e, 1)}>
                         <MenuItem value={0}>0</MenuItem>
@@ -114,9 +115,9 @@ function Cart() {
                 <TableEntry item xs={1}><IconButton onClick={() => HandleClick("delete")}><ClearIcon fontSize="large" /></IconButton></TableEntry>
                 <Divider style={{width:'100%'}}/>
                 {/* #2 */}
-                <TableEntry item xs={4}><Link to="/Product">Fancl HTC Collagen DX</Link></TableEntry>
-                <TableEntry item xs={2}>USD $160</TableEntry>
-                <TableEntry item xs={2}>USD $160</TableEntry>
+                <TableEntry item xs={4} component={Link} to="/product">Fancl HTC Collagen DX</TableEntry>
+                <TableEntry item xs={2}>HKD $160</TableEntry>
+                <TableEntry item xs={2}>HKD $160</TableEntry>
                 <TableEntry item xs={2}>
                     <Select value={count2} onChange={(e) => HandleChange(e, 2)}>
                         <MenuItem value={0}>0</MenuItem>
@@ -136,9 +137,9 @@ function Cart() {
                 <TableEntry item xs={1}><IconButton onClick={() => HandleClick("delete")}><ClearIcon fontSize="large" /></IconButton></TableEntry>
                 <Divider style={{width:'100%'}}/>
                 {/* #3 */}
-                <TableEntry item xs={4}><Link to="/Product">St Clare Sebum Treatment Set</Link></TableEntry>
-                <TableEntry item xs={2}>USD $150</TableEntry>
-                <TableEntry item xs={2}>USD $150</TableEntry>
+                <TableEntry item xs={4} component={Link} to="/product">St Clare Sebum Treatment Set</TableEntry>
+                <TableEntry item xs={2}>HKD $150</TableEntry>
+                <TableEntry item xs={2}>HKD $150</TableEntry>
                 <TableEntry item xs={2}>
                     <Select value={count3} onChange={(e) => HandleChange(e, 3)}>
                         <MenuItem value={0}>0</MenuItem>
@@ -174,9 +175,9 @@ function Cart() {
                     </Box>
                 </Box>
             </Modal>
-            <Box display={"flex"} justifyContent="flex-end" padding={"10px"}>
-                <Box display="inline-flex" flexDirection={"column"} padding={"15px"} border={1}>
-                    <Typography align='left' fontSize={"24px"} style={{ lineHeight: "40px" }}>Item count: 3 <br /> Weight: 45g <br /> Price: USD $1010</Typography>
+            <Box display={"flex"} justifyContent={"flex-end"} padding={"10px"}>
+                <Box display={"inline-flex"} flexDirection={"column"} padding={"15px"} border={1}>
+                    <Typography align='left' fontSize={"24px"} style={{ lineHeight: "40px" }}>Item count: 3 <br /> Weight: 45g <br /> Price: HKD $1010</Typography>
                     <Button sx={{
                         width: "100%",
                         height: "50px",

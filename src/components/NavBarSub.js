@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AppBar, IconButton, Collapse, Divider, Grid, List, ListItemButton, Toolbar } from '@mui/material'
 import styled from '@emotion/styled';
 import { theme } from '../theme';
@@ -25,17 +25,6 @@ import Orbis from '../pics/Orbis.jpg';
 const StyledToolbar = styled(Toolbar)({
     justifyContent: "space-between",
 })
-// const StyledButton = styled(Button)({
-//     color: theme.palette.text.main,
-//     fontSize: 20,
-//     padding: 0,
-//     width: "200px",
-//     height: "50px",
-//     backgroundColor: theme.palette.secondary.main,
-//     '&:hover': {
-//         backgroundColor: theme.palette.secondary.dark,
-//     },
-// })
 const StyledListButton = styled(ListItemButton)({
     fontSize: 20,
     padding: 0,
@@ -61,12 +50,13 @@ const StyledCurrentPos = styled("div")({
     padding: 8,
     fontSize: 20,
 })
+
 function NavBarSub() {
     const PAGE_TEXTS = [
-        {page:"/", text: "Main Page"},
-        {page:"/shoppingcart", text: "Shopping Cart"},
-        {page:"/catalogue", text: "Catalogue"},
-        {page:"/product", text: "Product Details"}
+        { page: "/", text: "Main Page" },
+        { page: "/shoppingcart", text: "Shopping Cart" },
+        { page: "/catalogue", text: "Catalogue" },
+        { page: "/product", text: "Product Details" }
     ]
     const location = useLocation();
     const currentPage = PAGE_TEXTS.find(el => el.page === location.pathname)?.text;
@@ -94,6 +84,9 @@ function NavBarSub() {
             case "cat_brand":
                 setStateCat("cat_brand");
                 break;
+            case "cat_region":
+                setStateCat("cat_region");
+                break;
             default: break;
         }
     };
@@ -119,40 +112,48 @@ function NavBarSub() {
                                     <List>
                                         <StyledListButton onClick={() => HandleClick("cat_type")}>Type</StyledListButton><Divider />
                                         <StyledListButton onClick={() => HandleClick("cat_brand")}>Brand</StyledListButton><Divider />
-                                        <StyledListButton>Region</StyledListButton><Divider />
-                                        <StyledListButton>Free shipping</StyledListButton><Divider />
-                                        <StyledListButton>Samples</StyledListButton><Divider />
-                                        <StyledListButton>Clearance</StyledListButton>
+                                        <StyledListButton onClick={() => HandleClick("cat_region")}>Region</StyledListButton><Divider />
+                                        <StyledListButton component={Link} to="/catalogue">Free shipping</StyledListButton><Divider />
+                                        <StyledListButton component={Link} to="/catalogue">Samples</StyledListButton><Divider />
+                                        <StyledListButton component={Link} to="/catalogue">Clearance</StyledListButton>
                                     </List>
 
                                     <Collapse in={stateCat === "cat_type"} timeout="auto" unmountOnExit >
                                         <List>
-                                            <StyledListButton>Cosmetic</StyledListButton><Divider />
-                                            <StyledListButton>Skincare</StyledListButton><Divider />
-                                            <StyledListButton>Body care & Nail</StyledListButton><Divider />
-                                            <StyledListButton>Baby wear</StyledListButton><Divider />
-                                            <StyledListButton>Beauty machine</StyledListButton><Divider />
+                                            <StyledListButton component={Link} to="/catalogue">Cosmetic</StyledListButton><Divider />
+                                            <StyledListButton component={Link} to="/catalogue">Skincare</StyledListButton><Divider />
+                                            <StyledListButton component={Link} to="/catalogue">Body care & Nail</StyledListButton><Divider />
+                                            <StyledListButton component={Link} to="/catalogue">Baby wear</StyledListButton><Divider />
+                                            <StyledListButton component={Link} to="/catalogue">Beauty machine</StyledListButton><Divider />
                                         </List>
                                     </Collapse>
                                     <Collapse in={stateCat === "cat_brand"} timeout="auto" unmountOnExit>
                                         <Grid container width={"500px"} columns={4} spacing={0}>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Albion} alt="Albion" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={AugustinusBader} alt="AugustinusBader" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Covermark} alt="Covermark" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Curel} alt="Curel" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={DrWu} alt="DrWu" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={FaceQ} alt="FaceQ" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={HACCI} alt="HACCI" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={HadaLabo} alt="HadaLabo" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={JuJuAquamoist} alt="JuJuAquamoist" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={KaoBiore} alt="KaoBiore" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Kose} alt="Kose" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Laneige} alt="Laneige" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Minon} alt="Minon" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Mioggi} alt="Mioggi" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Nivea} alt="Nivea" /></StyledGridButton></StyledGridBox></Grid>
-                                            <Grid item xs={1}><StyledGridBox><StyledGridButton><img src={Orbis} alt="Orbis" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Albion} alt="Albion" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={AugustinusBader} alt="AugustinusBader" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Covermark} alt="Covermark" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Curel} alt="Curel" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={DrWu} alt="DrWu" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={FaceQ} alt="FaceQ" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={HACCI} alt="HACCI" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={HadaLabo} alt="HadaLabo" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={JuJuAquamoist} alt="JuJuAquamoist" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={KaoBiore} alt="KaoBiore" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Kose} alt="Kose" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Laneige} alt="Laneige" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Minon} alt="Minon" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Mioggi} alt="Mioggi" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Nivea} alt="Nivea" /></StyledGridButton></StyledGridBox></Grid>
+                                            <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Orbis} alt="Orbis" /></StyledGridButton></StyledGridBox></Grid>
                                         </Grid>
+                                    </Collapse>
+                                    <Collapse in={stateCat === "cat_region"} timeout="auto" unmountOnExit >
+                                        <List>
+                                            <StyledListButton component={Link} to="/catalogue">Taiwan</StyledListButton><Divider />
+                                            <StyledListButton component={Link} to="/catalogue">Japan</StyledListButton><Divider />
+                                            <StyledListButton component={Link} to="/catalogue">Korea</StyledListButton><Divider />
+                                            <StyledListButton component={Link} to="/catalogue">Hong Kong</StyledListButton><Divider />
+                                        </List>
                                     </Collapse>
                                 </Box>
                             </Collapse>

@@ -112,47 +112,59 @@ function Home() {
             <Stack direction="row" marginY="20px">
                 <Typography align="center" display={"flex"} justifyContent={"center"} alignItems={"center"} variant="h3" width="300px">Featured<br />products</Typography>
                 <StyledProductList>
-                    <Tooltip disableInteractive title="Sk II Facial Treatment Essence 160ml"><Link to="/product">
-                        <StyledProductButton><img src={product1} alt="1" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="SK-II Whitening Source Derm-Renewal Essence 50g"><Link to="/product">
-                        <StyledProductButton><img src={product2} alt="2" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="SKII Facial Treatment Mask 6 pcs"><Link to="/product">
-                        <StyledProductButton><img src={product3} alt="3" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="SK II Auractivator CC Cream 30ml"><Link to="/product">
-                        <StyledProductButton><img src={product4} alt="4" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="Sk II R.N.A Poweer Eye Cream 15g"><Link to="/product">
-                        <StyledProductButton><img src={product5} alt="5" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="Fancl HTC Collagen DX"><Link to="/product">
-                        <StyledProductButton><img src={product6} alt="6" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="St Clare Sebum Treatment Set"><Link to="/product">
-                        <StyledProductButton><img src={product7} alt="7" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="Kanebo Suisai Beauty Clear Powder"><Link to="/product">
-                        <StyledProductButton><img src={product8} alt="8" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="Biore UV Perfect Face Milk Spf 50x3"><Link to="/product">
-                        <StyledProductButton><img src={product9} alt="9" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
+                    <Tooltip disableInteractive title="Sk II Facial Treatment Essence 160ml">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product1} alt="1" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SK-II Whitening Source Derm-Renewal Essence 50g">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product2} alt="2" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SKII Facial Treatment Mask 6 pcs">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product3} alt="3" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SK II Auractivator CC Cream 30ml">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product4} alt="4" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Sk II R.N.A Poweer Eye Cream 15g">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product5} alt="5" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Fancl HTC Collagen DX">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product6} alt="6" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="St Clare Sebum Treatment Set">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product7} alt="7" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Kanebo Suisai Beauty Clear Powder">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product8} alt="8" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Biore UV Perfect Face Milk Spf 50x3">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product9} alt="9" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Sk II Facial Treatment Essence 160ml">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product1} alt="10" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SK-II Whitening Source Derm-Renewal Essence 50g">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product2} alt="11" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SKII Facial Treatment Mask 6 pcs">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product3} alt="12" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
                 </StyledProductList>
             </Stack>
             <Stack direction="row" marginY="20px">
                 <Typography align="center" display={"flex"} justifyContent={"center"} alignItems={"center"} variant="h3" width="300px">Best<br />sellers</Typography>
                 <StyledProductList>
-                    <Tooltip disableInteractive title="Sk II Facial Treatment Essence 160ml"><Link to="/product">
-                        <StyledProductButton><img src={product1} alt="1" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="SK-II Whitening Source Derm-Renewal Essence 50g"><Link to="/product">
-                        <StyledProductButton><img src={product2} alt="2" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="SKII Facial Treatment Mask 6 pcs"><Link to="/product">
-                        <StyledProductButton><img src={product3} alt="3" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="SK II Auractivator CC Cream 30ml"><Link to="/product">
-                        <StyledProductButton><img src={product4} alt="4" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="Sk II R.N.A Poweer Eye Cream 15g"><Link to="/product">
-                        <StyledProductButton><img src={product5} alt="5" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="Fancl HTC Collagen DX"><Link to="/product">
-                        <StyledProductButton><img src={product6} alt="6" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="St Clare Sebum Treatment Set"><Link to="/product">
-                        <StyledProductButton><img src={product7} alt="7" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="Kanebo Suisai Beauty Clear Powder"><Link to="/product">
-                        <StyledProductButton><img src={product8} alt="8" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
-                    <Tooltip disableInteractive title="Biore UV Perfect Face Milk Spf 50x3"><Link to="/product">
-                        <StyledProductButton><img src={product9} alt="9" width={"160px"} height={"160px"} /></StyledProductButton></Link></Tooltip>
+                    <Tooltip disableInteractive title="Sk II Facial Treatment Essence 160ml">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product1} alt="1" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SK-II Whitening Source Derm-Renewal Essence 50g">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product2} alt="2" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SKII Facial Treatment Mask 6 pcs">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product3} alt="3" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SK II Auractivator CC Cream 30ml">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product4} alt="4" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Sk II R.N.A Poweer Eye Cream 15g">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product5} alt="5" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Fancl HTC Collagen DX">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product6} alt="6" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="St Clare Sebum Treatment Set">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product7} alt="7" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Kanebo Suisai Beauty Clear Powder">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product8} alt="8" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Biore UV Perfect Face Milk Spf 50x3">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product9} alt="9" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="Sk II Facial Treatment Essence 160ml">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product1} alt="10" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SK-II Whitening Source Derm-Renewal Essence 50g">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product2} alt="11" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
+                    <Tooltip disableInteractive title="SKII Facial Treatment Mask 6 pcs">
+                        <StyledProductButton component={Link} to={"/product"}><img src={product3} alt="12" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
                 </StyledProductList>
             </Stack>
         </div>

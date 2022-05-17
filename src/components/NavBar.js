@@ -54,10 +54,10 @@ function NavBar() {
   };
   const open = Boolean(anchorEl);
 
-  const HandleInput = (event) =>{
+  const HandleInput = (event) => {
     setInputText(event.target.value);
   }
-  const HandleSearch = () =>{
+  const HandleSearch = () => {
     setInputText("");
   }
 
@@ -66,11 +66,9 @@ function NavBar() {
       <AppBar position="static">
         <StyledToolbar>
 
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <StyledHomeButton>
-              BOBODAVE
-            </StyledHomeButton>
-          </Link>
+          <StyledHomeButton component={Link} to="/">
+            BOBODAVE
+          </StyledHomeButton>
 
           <Search>
             <div style={{
@@ -82,33 +80,29 @@ function NavBar() {
                 margin: 1
               }} />
             </div>
-            <Link to="/catalogue">
-              <StyledSearchButton variant="contained" onClick={HandleSearch}>
-                <SearchOutlinedIcon fontSize="large" />
-              </StyledSearchButton>
-            </Link>
+            <StyledSearchButton component={Link} to="/catalogue" variant="contained" onClick={HandleSearch}>
+              <SearchOutlinedIcon fontSize="large" />
+            </StyledSearchButton>
           </Search>
 
           <div>
             <StyledButton variant="contained" onClick={HandleClick}>
               <PersonOutlineOutlinedIcon fontSize="large" />
             </StyledButton>
+
             <Popper open={open} anchorEl={anchorEl}>
-              <List sx={{borderRadius: 4, backgroundColor: theme.palette.primary.main}}>
+              <List sx={{ borderRadius: 4, backgroundColor: theme.palette.primary.main }}>
                 <StyledListButton>Login/Register</StyledListButton>
                 <StyledListButton>Favourites</StyledListButton>
                 <StyledListButton>Forum</StyledListButton>
                 <StyledListButton>Language</StyledListButton>
                 <StyledListButton>Log out</StyledListButton>
-
               </List>
             </Popper>
 
-            <Link to="/shoppingcart" style={{ textDecoration: "none" }}>
-              <StyledButton variant="contained">
-                <ShoppingCartOutlinedIcon fontSize="large" />
-              </StyledButton>
-            </Link>
+            <StyledButton component={Link} to="/shoppingcart" variant="contained">
+              <ShoppingCartOutlinedIcon fontSize="large" />
+            </StyledButton>
           </div>
         </StyledToolbar>
       </AppBar>
