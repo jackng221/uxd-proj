@@ -179,7 +179,7 @@ function Cart() {
                     </Box>
                 </Box>
             </Modal>
-            <Box display={"flex"} justifyContent={"flex-end"} padding={"10px"}>
+            <Box display={"flex"} justifyContent={"flex-end"} padding={"10px"} paddingRight={"40px"}>
                 <Box display={"inline-flex"} flexDirection={"column"} padding={"15px"} border={1}>
                     <Typography align='left' fontSize={"24px"} style={{ lineHeight: "40px" }}>Item count: 3 <br /> Weight: 45g <br /> Price: HKD $1010</Typography>
                     <Button sx={{
