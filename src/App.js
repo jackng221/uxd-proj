@@ -8,6 +8,7 @@ import NavBarSub from './components/NavBarSub';
 import BottomBar from './components/BottomBar';
 import { Box } from '@mui/system';
 import ScrollToTop from './components/ScrollToTop';
+import React from 'react';
 
 function App() {
   return (
@@ -23,7 +24,6 @@ function App() {
           <Route path="/product" element={<Product />} />
         </Routes>
       </Box>
-
       <BottomBar />
     </Router>
   );

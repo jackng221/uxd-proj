@@ -37,6 +37,10 @@ const StyledButton = styled(Button)({
         backgroundColor: theme.palette.secondary.dark,
     },
 })
+const StyledSelect = styled(Select)({
+    backgroundColor: "white",
+    '&.Mui-focused .MuiOutlinedInput-notchedOutline':{borderColor: "black"},
+})
 const newsDialogStyle = {
     position: 'absolute',
     top: '50%',
@@ -97,7 +101,7 @@ function Cart() {
                 <TableEntry item xs={2}>HKD $700</TableEntry>
                 <TableEntry item xs={2}>HKD $700</TableEntry>
                 <TableEntry item xs={2}>
-                    <Select value={count1} onChange={(e) => HandleChange(e, 1)}>
+                    <StyledSelect value={count1} onChange={(e) => HandleChange(e, 1)}>
                         <MenuItem value={0}>0</MenuItem>
                         <MenuItem value={1}>1</MenuItem>
                         <MenuItem value={2}>2</MenuItem>
@@ -109,7 +113,7 @@ function Cart() {
                         <MenuItem value={8}>8</MenuItem>
                         <MenuItem value={9}>9</MenuItem>
                         <MenuItem value={10}>10</MenuItem>
-                    </Select>
+                    </StyledSelect>
                 </TableEntry>
                 <TableEntry item xs={1}><StyledCheckbox defaultChecked={true}/></TableEntry>
                 <TableEntry item xs={1}><IconButton onClick={() => HandleClick("delete")}><ClearIcon fontSize="large" /></IconButton></TableEntry>
@@ -119,7 +123,7 @@ function Cart() {
                 <TableEntry item xs={2}>HKD $160</TableEntry>
                 <TableEntry item xs={2}>HKD $160</TableEntry>
                 <TableEntry item xs={2}>
-                    <Select value={count2} onChange={(e) => HandleChange(e, 2)}>
+                    <StyledSelect value={count2} onChange={(e) => HandleChange(e, 2)}>
                         <MenuItem value={0}>0</MenuItem>
                         <MenuItem value={1}>1</MenuItem>
                         <MenuItem value={2}>2</MenuItem>
@@ -131,7 +135,7 @@ function Cart() {
                         <MenuItem value={8}>8</MenuItem>
                         <MenuItem value={9}>9</MenuItem>
                         <MenuItem value={10}>10</MenuItem>
-                    </Select>
+                    </StyledSelect>
                 </TableEntry>
                 <TableEntry item xs={1}><StyledCheckbox defaultChecked={true}/></TableEntry>
                 <TableEntry item xs={1}><IconButton onClick={() => HandleClick("delete")}><ClearIcon fontSize="large" /></IconButton></TableEntry>
@@ -141,7 +145,7 @@ function Cart() {
                 <TableEntry item xs={2}>HKD $150</TableEntry>
                 <TableEntry item xs={2}>HKD $150</TableEntry>
                 <TableEntry item xs={2}>
-                    <Select value={count3} onChange={(e) => HandleChange(e, 3)}>
+                    <StyledSelect value={count3} onChange={(e) => HandleChange(e, 3)}>
                         <MenuItem value={0}>0</MenuItem>
                         <MenuItem value={1}>1</MenuItem>
                         <MenuItem value={2}>2</MenuItem>
@@ -153,7 +157,7 @@ function Cart() {
                         <MenuItem value={8}>8</MenuItem>
                         <MenuItem value={9}>9</MenuItem>
                         <MenuItem value={10}>10</MenuItem>
-                    </Select>
+                    </StyledSelect>
                 </TableEntry>
                 <TableEntry item xs={1}><StyledCheckbox defaultChecked={true}/></TableEntry>
                 <TableEntry item xs={1}><IconButton onClick={() => HandleClick("delete")}><ClearIcon fontSize="large" /></IconButton></TableEntry>

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom';
 import { AppBar, IconButton, Collapse, Divider, Grid, List, ListItemButton, Toolbar } from '@mui/material'
 import styled from '@emotion/styled';
 import { theme } from '../theme';
@@ -89,7 +89,13 @@ function NavBarSub() {
                 break;
             default: break;
         }
-    };
+    };   
+    const { pathname } = useLocation();
+    useEffect(() => {
+        setOpenCat(false);
+        setOpenFAQ(false);
+    }, [pathname]);
+
     return (
         <div className="NavBarSub">
             <AppBar position="static" sx={{
@@ -118,7 +124,7 @@ function NavBarSub() {
                                         <StyledListButton component={Link} to="/catalogue">Clearance</StyledListButton>
                                     </List>
 
-                                    <Collapse in={stateCat === "cat_type"} timeout="auto" unmountOnExit >
+                                    <Collapse in={stateCat === "cat_type"} timeout={{enter:500, exit: 0}} unmountOnExit >
                                         <List>
                                             <StyledListButton component={Link} to="/catalogue">Cosmetic</StyledListButton><Divider />
                                             <StyledListButton component={Link} to="/catalogue">Skincare</StyledListButton><Divider />
@@ -127,7 +133,7 @@ function NavBarSub() {
                                             <StyledListButton component={Link} to="/catalogue">Beauty machine</StyledListButton><Divider />
                                         </List>
                                     </Collapse>
-                                    <Collapse in={stateCat === "cat_brand"} timeout="auto" unmountOnExit>
+                                    <Collapse in={stateCat === "cat_brand"} timeout={{enter:500, exit: 0}} unmountOnExit>
                                         <Grid container width={"500px"} columns={4} spacing={0}>
                                             <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Albion} alt="Albion" /></StyledGridButton></StyledGridBox></Grid>
                                             <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={AugustinusBader} alt="AugustinusBader" /></StyledGridButton></StyledGridBox></Grid>
@@ -147,7 +153,7 @@ function NavBarSub() {
                                             <Grid item xs={1}><StyledGridBox><StyledGridButton component={Link} to="/catalogue"><img src={Orbis} alt="Orbis" /></StyledGridButton></StyledGridBox></Grid>
                                         </Grid>
                                     </Collapse>
-                                    <Collapse in={stateCat === "cat_region"} timeout="auto" unmountOnExit >
+                                    <Collapse in={stateCat === "cat_region"} timeout={{enter:500, exit: 0}} unmountOnExit >
                                         <List>
                                             <StyledListButton component={Link} to="/catalogue">Taiwan</StyledListButton><Divider />
                                             <StyledListButton component={Link} to="/catalogue">Japan</StyledListButton><Divider />

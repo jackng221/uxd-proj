@@ -36,8 +36,8 @@ const StyledProductButton = styled(Button)({
     lineHeight: "200px",
     padding: 0,
 })
-const StyledProductList = styled("div")({
-    dislay: "flex",
+const StyledProductList = styled(Box)({
+    width: "auto",
     maxHeight: "200px",
     overflowX: "scroll",
     overflowY: "hidden",
@@ -109,8 +109,8 @@ function Home() {
                     <StyledBannerButton onClick={() => HandleClick("banner2")}>2</StyledBannerButton>
                 </Box>
             </Box>
-            <Stack direction="row" marginY="20px">
-                <Typography align="center" display={"flex"} justifyContent={"center"} alignItems={"center"} variant="h3" width="300px">Featured<br />products</Typography>
+            <Box display="flex" flexDirection="row" marginY="20px" alignItems={"center"}>
+                <Typography align="center" variant="h3" justifyContent={"center"}  minWidth="250px">Featured<br />products</Typography>
                 <StyledProductList>
                     <Tooltip disableInteractive title="Sk II Facial Treatment Essence 160ml">
                         <StyledProductButton component={Link} to={"/product"}><img src={product1} alt="1" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
@@ -137,9 +137,9 @@ function Home() {
                     <Tooltip disableInteractive title="SKII Facial Treatment Mask 6 pcs">
                         <StyledProductButton component={Link} to={"/product"}><img src={product3} alt="12" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
                 </StyledProductList>
-            </Stack>
-            <Stack direction="row" marginY="20px">
-                <Typography align="center" display={"flex"} justifyContent={"center"} alignItems={"center"} variant="h3" width="300px">Best<br />sellers</Typography>
+            </Box>
+            <Box display="flex" flexDirection="row" marginY="20px" alignItems={"center"}>
+                <Typography align="center" variant="h3" justifyContent={"center"}  minWidth="250px">Best<br />sellers</Typography>
                 <StyledProductList>
                     <Tooltip disableInteractive title="Sk II Facial Treatment Essence 160ml">
                         <StyledProductButton component={Link} to={"/product"}><img src={product1} alt="1" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
@@ -166,7 +166,7 @@ function Home() {
                     <Tooltip disableInteractive title="SKII Facial Treatment Mask 6 pcs">
                         <StyledProductButton component={Link} to={"/product"}><img src={product3} alt="12" width={"160px"} height={"160px"} /></StyledProductButton></Tooltip>
                 </StyledProductList>
-            </Stack>
+            </Box>
         </div>
     )
 }

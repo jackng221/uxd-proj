@@ -17,6 +17,10 @@ const StyledButton = styled(Button)({
         backgroundColor: theme.palette.primary.dark,
     }
 })
+const StyledSelect = styled(Select)({
+    backgroundColor: "white",
+    '&.Mui-focused .MuiOutlinedInput-notchedOutline':{borderColor: "black"},
+})
 function Product() {
     const [count, setCount] = React.useState(1);
     const HandleChange = (event) =>{
@@ -39,7 +43,7 @@ function Product() {
                         <Grid item xs={2} />
                         <Grid item xs={1} display="flex" justifyContent="flex-end" alignItems="center">
                             Qty.
-                            <Select value={count} onChange={(e) => HandleChange(e)}>
+                            <StyledSelect value={count} onChange={(e) => HandleChange(e)}>
                                 <MenuItem value={0}>0</MenuItem>
                                 <MenuItem value={1}>1</MenuItem>
                                 <MenuItem value={2}>2</MenuItem>
@@ -51,7 +55,7 @@ function Product() {
                                 <MenuItem value={8}>8</MenuItem>
                                 <MenuItem value={9}>9</MenuItem>
                                 <MenuItem value={10}>10</MenuItem>
-                            </Select>
+                            </StyledSelect>
                         </Grid>
                         <Grid item xs={1} display="flex" justifyContent="center" alignItems="center">
                             <StyledButton><ShoppingCartOutlinedIcon/>Add to cart</StyledButton>

@@ -76,7 +76,7 @@ function NavBar() {
               borderRadius: "10px",
               width: "100%"
             }} >
-              <InputBase fullWidth value={inputText} onChange={HandleInput} sx={{
+              <InputBase fullWidth value={inputText} placeholder={"Search"} onChange={HandleInput} sx={{
                 margin: 1
               }} />
             </div>
