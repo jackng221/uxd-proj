@@ -6,6 +6,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { theme } from '../theme';
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 import product1 from '../pics/product1.jpg'
 import product2 from '../pics/product2.jpg'
@@ -16,7 +17,6 @@ import product6 from '../pics/product6.jpg'
 import product7 from '../pics/product7.jpg'
 import product8 from '../pics/product8.jpg'
 import product9 from '../pics/product9.jpg'
-import { Link } from 'react-router-dom';
 
 const StyledSelect = styled(Select)({
     backgroundColor: "white",
@@ -141,8 +141,9 @@ function Catalogue() {
                             <img src={product1} alt="product" />
                         </Box>
                     </Box>
-
-                    <Typography variant="h6" sx={{ flexGrow: 1 }} component={Link} to="/product">Sk II Facial Treatment Essence 160ml <br /> HKD $700</Typography>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" component={Link} to="/product">Sk II Facial Treatment Essence 160ml <br /> HKD $700</Typography>
+                    </Box>
                     <Box display="flex" alignItems={"flex-end"}>
                         <Stack direction="row" alignItems={"center"} spacing={1}>
                             <Typography>Qty.</Typography>
@@ -171,7 +172,9 @@ function Catalogue() {
                             <img src={product2} alt="product" />
                         </Box>
                     </Box>
-                    <Typography variant="h6" sx={{ flexGrow: 1 }} component={Link} to="/product">Sk II Facial Treatment Essence 160ml <br /> HKD $700</Typography>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" component={Link} to="/product">SK-II Whitening Source Derm-Renewal Essence 50g <br /> HKD $550</Typography>
+                    </Box>
                     <Box display="flex" alignItems={"flex-end"}>
                         <Stack direction="row" alignItems={"center"} spacing={1}>
                             <Typography>Qty.</Typography>
@@ -200,7 +203,9 @@ function Catalogue() {
                             <img src={product3} alt="product" />
                         </Box>
                     </Box>
-                    <Typography variant="h6" sx={{ flexGrow: 1 }} component={Link} to="/product">Sk II Facial Treatment Essence 160ml <br /> HKD $700</Typography>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" component={Link} to="/product">SKII Facial Treatment Mask 6 pcs <br /> HKD $490</Typography>
+                    </Box>
                     <Box display="flex" alignItems={"flex-end"}>
                         <Stack direction="row" alignItems={"center"} spacing={1}>
                             <Typography>Qty.</Typography>
@@ -229,7 +234,9 @@ function Catalogue() {
                             <img src={product4} alt="product" />
                         </Box>
                     </Box>
-                    <Typography variant="h6" sx={{ flexGrow: 1 }} component={Link} to="/product">Sk II Facial Treatment Essence 160ml <br /> HKD $700</Typography>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" component={Link} to="/product">SK II Auractivator CC Cream 30ml<br /> HKD $690</Typography>
+                    </Box>
                     <Box display="flex" alignItems={"flex-end"}>
                         <Stack direction="row" alignItems={"center"} spacing={1}>
                             <Typography>Qty.</Typography>
@@ -258,7 +265,9 @@ function Catalogue() {
                             <img src={product5} alt="product" />
                         </Box>
                     </Box>
-                    <Typography variant="h6" sx={{ flexGrow: 1 }} component={Link} to="/product">Sk II Facial Treatment Essence 160ml <br /> HKD $700</Typography>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" component={Link} to="/product">Sk II R.N.A Poweer Eye Cream 15g<br /> HKD $600</Typography>
+                    </Box>
                     <Box display="flex" alignItems={"flex-end"}>
                         <Stack direction="row" alignItems={"center"} spacing={1}>
                             <Typography>Qty.</Typography>
@@ -291,7 +300,9 @@ function Catalogue() {
                                     <img src={product1} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>Sk II Facial Treatment Essence 160ml</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">Sk II Facial Treatment Essence 160ml</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $700</Typography>
@@ -325,7 +336,9 @@ function Catalogue() {
                                     <img src={product2} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>SK-II Whitening Source Derm-Renewal Essence 50g</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">SK-II Whitening Source Derm-Renewal Essence 50g</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $550</Typography>
@@ -359,7 +372,9 @@ function Catalogue() {
                                     <img src={product3} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>SKII Facial Treatment Mask 6 pcs</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">SKII Facial Treatment Mask 6 pcs</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $490</Typography>
@@ -393,7 +408,9 @@ function Catalogue() {
                                     <img src={product4} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>SK II Auractivator CC Cream 30ml</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">SK II Auractivator CC Cream 30ml</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $650</Typography>
@@ -427,7 +444,9 @@ function Catalogue() {
                                     <img src={product5} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>Sk II R.N.A Poweer Eye Cream 15g</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">Sk II R.N.A Poweer Eye Cream 15g</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $600</Typography>
@@ -461,7 +480,9 @@ function Catalogue() {
                                     <img src={product6} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>Fancl HTC Collagen DX</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">Fancl HTC Collagen DX</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $160</Typography>
@@ -495,7 +516,9 @@ function Catalogue() {
                                     <img src={product7} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>St Clare Sebum Treatment Set</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">St Clare Sebum Treatment Set</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $150</Typography>
@@ -529,7 +552,9 @@ function Catalogue() {
                                     <img src={product8} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>Kanebo Suisai Beauty Clear Powder</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">Kanebo Suisai Beauty Clear Powder</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $150</Typography>
@@ -563,7 +588,9 @@ function Catalogue() {
                                     <img src={product9} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>Biore UV Perfect Face Milk Spf 50x3</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">Biore UV Perfect Face Milk Spf 50x3</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $250</Typography>
@@ -597,7 +624,9 @@ function Catalogue() {
                                     <img src={product1} alt="product" />
                                 </Box>
                             </Box>
-                            <Typography sx={{ flexGrow: 1 }}>Sk II Facial Treatment Essence 160ml</Typography>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Typography component={Link} to="/product">Sk II Facial Treatment Essence 160ml</Typography>
+                            </Box>
                             <Box display="flex" flexDirection="row" justifyContent={"space-between"} width="100%">
                                 <Stack>
                                     <Typography>HKD $700</Typography>

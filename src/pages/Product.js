@@ -29,7 +29,7 @@ function Product() {
     }
     return (
         <Box>
-            <Box display={"flex"} padding={"20px"}>
+            <Box display={"flex"} paddingX={"50px"} paddingY={"20px"}>
                 <Box display={"flex"} justifyContent="center" padding={"10px"} border={1} sx={{ flexGrow: 1 }}>
                     <img src={product} alt="product" />
                 </Box>
