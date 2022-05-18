@@ -135,160 +135,181 @@ function Catalogue() {
                 </Box>
             </Box>
             <Collapse in={viewStyle === "List"} timeout={0}>
-                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} spacing={4}>
-                    <Box display="flex" justifyContent="center" width={"150px"} >
-                        <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
-                            <img src={product1} alt="product" />
+                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} justifyContent={"space-evenly"}>
+                    <Stack direction="row" spacing={4} style={{ minWidth: "750px" }}>
+                        <Box display="flex" justifyContent="center" width={"150px"} >
+                            <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
+                                <img src={product1} alt="product" />
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box sx={{ flexGrow: 1 }}>
-                        <Typography variant="h6" component={Link} to="/product">Sk II Facial Treatment Essence 160ml <br /> HKD $700</Typography>
-                    </Box>
-                    <Box display="flex" alignItems={"flex-end"}>
-                        <Stack direction="row" alignItems={"center"} spacing={1}>
-                            <Typography>Qty.</Typography>
-                            <StyledSelect value={count1} onChange={(e) => HandleSelect(e, 1)}>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </StyledSelect>
-                        </Stack>
-                    </Box>
-                    <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
-                        <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
-                        <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
-                    </Box>
+                        <Box sx={{ flexGrow: 1 }}>
+                            <Typography variant="h5" component={Link} to="/product">Sk II Facial Treatment Essence 160ml <br /> HKD $700</Typography>
+                        </Box>
+                    </Stack>
+                    <Stack direction="row" spacing={4}>
+                        <Box display="flex" alignItems={"flex-end"}>
+                            <Stack direction="row" alignItems={"center"} spacing={1}>
+                                <Typography>Qty.</Typography>
+                                <StyledSelect value={count1} onChange={(e) => HandleSelect(e, 1)}>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </StyledSelect>
+                            </Stack>
+                        </Box>
+                        <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
+                            <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
+                            <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
+                        </Box>
+                    </Stack>
                 </Stack>
-                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} spacing={4}>
-                    <Box display="flex" justifyContent="center" width={"150px"} >
-                        <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
-                            <img src={product2} alt="product" />
+                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} justifyContent={"space-evenly"}>
+                    <Stack direction="row" spacing={4} style={{ minWidth: "750px" }}>
+
+                        <Box display="flex" justifyContent="center" width={"150px"} >
+                            <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
+                                <img src={product2} alt="product" />
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box sx={{ flexGrow: 1 }}>
-                        <Typography variant="h6" component={Link} to="/product">SK-II Whitening Source Derm-Renewal Essence 50g <br /> HKD $550</Typography>
-                    </Box>
-                    <Box display="flex" alignItems={"flex-end"}>
-                        <Stack direction="row" alignItems={"center"} spacing={1}>
-                            <Typography>Qty.</Typography>
-                            <StyledSelect value={count2} onChange={(e) => HandleSelect(e, 2)}>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </StyledSelect>
-                        </Stack>
-                    </Box>
-                    <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
-                        <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
-                        <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
-                    </Box>
+                        <Box sx={{ flexGrow: 1 }}>
+                            <Typography variant="h5" component={Link} to="/product">SK-II Whitening Source Derm-Renewal Essence 50g <br /> HKD $550</Typography>
+                        </Box>
+                    </Stack>
+                    <Stack direction="row" spacing={4}>
+                        <Box display="flex" alignItems={"flex-end"}>
+                            <Stack direction="row" alignItems={"center"} spacing={1}>
+                                <Typography>Qty.</Typography>
+                                <StyledSelect value={count2} onChange={(e) => HandleSelect(e, 2)}>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </StyledSelect>
+                            </Stack>
+                        </Box>
+                        <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
+                            <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
+                            <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
+                        </Box>
+                    </Stack>
                 </Stack>
-                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} spacing={4}>
-                    <Box display="flex" justifyContent="center" width={"150px"} >
-                        <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
-                            <img src={product3} alt="product" />
+                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} justifyContent={"space-evenly"}>
+                    <Stack direction="row" spacing={4} style={{ minWidth: "750px" }}>
+                        <Box display="flex" justifyContent="center" width={"150px"} >
+                            <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
+                                <img src={product3} alt="product" />
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box sx={{ flexGrow: 1 }}>
-                        <Typography variant="h6" component={Link} to="/product">SKII Facial Treatment Mask 6 pcs <br /> HKD $490</Typography>
-                    </Box>
-                    <Box display="flex" alignItems={"flex-end"}>
-                        <Stack direction="row" alignItems={"center"} spacing={1}>
-                            <Typography>Qty.</Typography>
-                            <StyledSelect value={count3} onChange={(e) => HandleSelect(e, 3)}>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </StyledSelect>
-                        </Stack>
-                    </Box>
-                    <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
-                        <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
-                        <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
-                    </Box>
+                        <Box sx={{ flexGrow: 1 }}>
+                            <Typography variant="h5" component={Link} to="/product">SKII Facial Treatment Mask 6 pcs <br /> HKD $490</Typography>
+                        </Box>
+                    </Stack>
+                    <Stack direction="row" spacing={4}>
+                        <Box display="flex" alignItems={"flex-end"}>
+                            <Stack direction="row" alignItems={"center"} spacing={1}>
+                                <Typography>Qty.</Typography>
+                                <StyledSelect value={count3} onChange={(e) => HandleSelect(e, 3)}>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </StyledSelect>
+                            </Stack>
+                        </Box>
+                        <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
+                            <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
+                            <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
+                        </Box>
+                    </Stack>
                 </Stack>
-                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} spacing={4}>
-                    <Box display="flex" justifyContent="center" width={"150px"} >
-                        <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
-                            <img src={product4} alt="product" />
+                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} justifyContent={"space-evenly"}>
+                    <Stack direction="row" spacing={4} style={{ minWidth: "750px" }}>
+                        <Box display="flex" justifyContent="center" width={"150px"} >
+                            <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
+                                <img src={product4} alt="product" />
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box sx={{ flexGrow: 1 }}>
-                        <Typography variant="h6" component={Link} to="/product">SK II Auractivator CC Cream 30ml<br /> HKD $690</Typography>
-                    </Box>
-                    <Box display="flex" alignItems={"flex-end"}>
-                        <Stack direction="row" alignItems={"center"} spacing={1}>
-                            <Typography>Qty.</Typography>
-                            <StyledSelect value={count4} onChange={(e) => HandleSelect(e, 4)}>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </StyledSelect>
-                        </Stack>
-                    </Box>
-                    <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
-                        <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
-                        <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
-                    </Box>
+                        <Box sx={{ flexGrow: 1 }}>
+                            <Typography variant="h5" component={Link} to="/product">SK II Auractivator CC Cream 30ml<br /> HKD $690</Typography>
+                        </Box>
+                    </Stack>
+                    <Stack direction="row" spacing={4}>
+                        <Box display="flex" alignItems={"flex-end"}>
+                            <Stack direction="row" alignItems={"center"} spacing={1}>
+                                <Typography>Qty.</Typography>
+                                <StyledSelect value={count4} onChange={(e) => HandleSelect(e, 4)}>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </StyledSelect>
+                            </Stack>
+                        </Box>
+                        <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
+                            <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
+                            <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
+                        </Box>
+                    </Stack>
                 </Stack>
-                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} spacing={4}>
-                    <Box display="flex" justifyContent="center" width={"150px"} >
-                        <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
-                            <img src={product5} alt="product" />
+                <Stack display="flex" direction="row" paddingX={"50px"} paddingY={"20px"} justifyContent={"space-evenly"}>
+                    <Stack direction="row" spacing={4} style={{ minWidth: "750px" }}>
+                        <Box display="flex" justifyContent="center" width={"150px"} >
+                            <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
+                                <img src={product5} alt="product" />
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box sx={{ flexGrow: 1 }}>
-                        <Typography variant="h6" component={Link} to="/product">Sk II R.N.A Poweer Eye Cream 15g<br /> HKD $600</Typography>
-                    </Box>
-                    <Box display="flex" alignItems={"flex-end"}>
-                        <Stack direction="row" alignItems={"center"} spacing={1}>
-                            <Typography>Qty.</Typography>
-                            <StyledSelect value={count5} onChange={(e) => HandleSelect(e, 5)}>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </StyledSelect>
-                        </Stack>
-                    </Box>
-                    <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
-                        <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
-                        <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
-                    </Box>
+                        <Box sx={{ flexGrow: 1 }}>
+                            <Typography variant="h5" component={Link} to="/product">Sk II R.N.A Poweer Eye Cream 15g<br /> HKD $600</Typography>
+                        </Box>
+                    </Stack>
+                    <Stack direction="row" spacing={4}>
+                        <Box display="flex" alignItems={"flex-end"}>
+                            <Stack direction="row" alignItems={"center"} spacing={1}>
+                                <Typography>Qty.</Typography>
+                                <StyledSelect value={count5} onChange={(e) => HandleSelect(e, 5)}>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </StyledSelect>
+                            </Stack>
+                        </Box>
+                        <Box display="flex" flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"}>
+                            <ListButton><FavoriteBorderOutlinedIcon />Favourite</ListButton>
+                            <ListButton><ShoppingCartOutlinedIcon />Add to cart</ListButton>
+                        </Box>
+                    </Stack>
                 </Stack>
             </Collapse>
             <Collapse in={viewStyle === "Grid"} timeout={0}>
