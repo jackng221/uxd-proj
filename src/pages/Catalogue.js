@@ -284,7 +284,7 @@ function Catalogue() {
             </Collapse>
             <Collapse in={viewStyle === "Grid"} timeout={0}>
                 <Grid container columns={5}>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -318,7 +318,7 @@ function Catalogue() {
                             </Box>
                         </Stack>
                     </Grid>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -352,7 +352,7 @@ function Catalogue() {
                             </Box>
                         </Stack>
                     </Grid>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -386,7 +386,7 @@ function Catalogue() {
                             </Box>
                         </Stack>
                     </Grid>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -420,7 +420,7 @@ function Catalogue() {
                             </Box>
                         </Stack>
                     </Grid>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -454,7 +454,7 @@ function Catalogue() {
                             </Box>
                         </Stack>
                     </Grid>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -488,7 +488,7 @@ function Catalogue() {
                             </Box>
                         </Stack>
                     </Grid>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -522,7 +522,7 @@ function Catalogue() {
                             </Box>
                         </Stack>
                     </Grid>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -556,7 +556,7 @@ function Catalogue() {
                             </Box>
                         </Stack>
                     </Grid>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -590,7 +590,7 @@ function Catalogue() {
                             </Box>
                         </Stack>
                     </Grid>
-                    <Grid item xs={1} padding="10px">
+                    <Grid item xs={1} paddingX="30px" paddingY="20px">
                         <Stack height={"300px"} alignItems={"center"} spacing={1}>
                             <Box display="flex" justifyContent="center" width={"150px"} >
                                 <Box display={"inline-flex"} justifyContent="center" height={"100px"} padding={"10px"} border={1}>
@@ -603,7 +603,7 @@ function Catalogue() {
                                     <Typography>HKD $700</Typography>
                                     <Stack direction="row" alignItems="center">
                                         <Typography>Qty.</Typography>
-                                        <StyledSelect value={count1} onChange={(e) => HandleSelect(e, 1)}>
+                                        <StyledSelect value={count10} onChange={(e) => HandleSelect(e, 10)}>
                                             <MenuItem value={1}>1</MenuItem>
                                             <MenuItem value={2}>2</MenuItem>
                                             <MenuItem value={3}>3</MenuItem>
