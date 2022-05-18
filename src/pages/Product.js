@@ -9,6 +9,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const StyledButton = styled(Button)({
     borderRadius: 12,
     fontSize: "16px",
+    width: "160px",
     margin: "10px",
     padding: "10px",
     color: theme.palette.text.main,
